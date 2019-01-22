@@ -1,3 +1,10 @@
+# TODOs
+- [ ] Before each project upgrade ember https://github.com/ember-cli/ember-cli/releases
+- [ ] npm install -g ember-cli@<latest>
+- [ ] npx ember-cli-update --to 3.7.1
+- [ ] yarn install --force and commit
+- [ ] npx ember-cli-update --run-codemods
+
 # ember-learnings
 
 This README outlines the details of collaborating on this Ember application.
