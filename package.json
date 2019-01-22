@@ -15,11 +15,17 @@
     "lint:hbs": "ember-template-lint .",
     "lint:js": "eslint .",
     "start": "ember serve",
-    "test": "ember test"
+    "test": "ember test",
+    "build-storybook": "ember build && build-storybook -p 9001 -s dist",
+    "storybook:dist": "ember build && build-storybook  -c .storybook -o .out -s dist",
+    "storybook": "ember serve & start-storybook -p 9001 -s dist"
   },
   "devDependencies": {
+    "@babel/core": "^7.2.2",
     "@ember/jquery": "^0.5.2",
     "@ember/optional-features": "^0.6.3",
+    "@storybook/ember": "^4.1.7",
+    "babel-loader": "^8.0.0-beta.6",
     "broccoli-asset-rev": "^2.7.0",
     "ember-ajax": "^3.1.0",
     "ember-cli": "~3.7.1",
@@ -31,6 +37,7 @@
     "ember-cli-htmlbars-inline-precompile": "^1.0.3",
     "ember-cli-inject-live-reload": "^1.8.2",
     "ember-cli-sri": "^2.1.1",
+    "ember-cli-storybook": "^0.0.1",
     "ember-cli-template-lint": "^1.0.0-beta.1",
     "ember-cli-uglify": "^2.1.0",
     "ember-data": "~3.7.0",
