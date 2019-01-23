@@ -1,5 +1,6 @@
 import hbs from 'htmlbars-inline-precompile';
 import { storiesOf } from '@storybook/ember';
+import { action } from '@storybook/addon-actions';
 
 storiesOf('Demo', module)
   .add('heading', () => hbs`<h1>Hello World</h1>`)
@@ -9,7 +10,7 @@ storiesOf('Demo', module)
         Hello Button
       </button>`,
       context: {
-        onClick: (e) => console.log(e)
+        onClick: action('clicked')
       }
     }
   })

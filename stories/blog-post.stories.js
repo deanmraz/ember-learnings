@@ -17,6 +17,13 @@ storiesOf('Blog Post', module)
         onClick: (e) => console.log(e)
       }
     }
+  }, {
+    notes: {
+      markdown: `
+# Markdown!
+> Notes can be done via markdown,
+`
+    }
   })
   .add('Emojis', () => {
     return {
