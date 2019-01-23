@@ -18,7 +18,9 @@
     "test": "ember test",
     "build-storybook": "ember build && build-storybook -p 9001 -s dist",
     "storybook:dist": "ember build && build-storybook  -c .storybook -o .out -s dist",
-    "storybook": "start-storybook -p 9001 -s dist"
+    "storybook": "start-storybook -p 9001 -s dist",
+    "jest:integration": "jest -c integration/jest.config.js",
+    "test:integration": "start-server-and-test storybook http-get://localhost:9001 jest:integration"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
@@ -55,8 +57,13 @@
     "ember-source": "~3.7.0",
     "ember-welcome-page": "^3.2.0",
     "eslint-plugin-ember": "^5.2.0",
+    "jest": "^23.6.0",
+    "jest-image-snapshot": "^2.7.0",
+    "jest-puppeteer": "^3.9.0",
     "loader.js": "^4.7.0",
-    "qunit-dom": "^0.8.0"
+    "puppeteer": "^1.11.0",
+    "qunit-dom": "^0.8.0",
+    "start-server-and-test": "^1.7.11"
   },
   "engines": {
     "node": "6.* || 8.* || >= 10.*"
