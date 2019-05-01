@@ -1,10 +1,20 @@
-/* eslint-env node */
-'use strict';
+/* jshint node: true */
+const HOST = 'ember-learnings-fastboot.runtrizdev.com';
+const AWS = {
+  accessKeyId: process.env.RT_DEV_AWS_ACCESS_KEY_ID,
+  secretAccessKey: process.env.RT_DEV_AWS_SECRET_ACCESS_KEY,
+  region: 'us-west-2',
+  bucket: `${HOST}`,
+};
 
 module.exports = function(deployTarget) {
-  let ENV = {
-    build: {}
+  var ENV = {
+    build: {},
     // include other plugin configuration that applies to all deploy targets here
+    "revision-data": {
+      type: 'file-hash',
+      scm: null
+    }
   };
 
   if (deployTarget === 'development') {
@@ -14,12 +24,28 @@ module.exports = function(deployTarget) {
 
   if (deployTarget === 'staging') {
     ENV.build.environment = 'production';
-    // configure other plugins for staging deploy target here
   }
 
   if (deployTarget === 'production') {
     ENV.build.environment = 'production';
-    // configure other plugins for production deploy target here
+
+    ENV.s3 = {
+      ...AWS,
+    };
+
+    ENV['s3-index'] = {
+      ...AWS,
+      allowOverwrite: true,
+    };
+
+    ENV['fastboot-s3'] = {
+      ...AWS,
+    };
+
+    ENV.pipeline = {
+      activateOnDeploy: true,
+    };
+
   }
 
   // Note: if you need to build some configuration asynchronously, you can return
