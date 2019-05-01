@@ -38,8 +38,9 @@ module.exports = function(deployTarget) {
       allowOverwrite: true,
     };
 
-    ENV['fastboot-s3'] = {
+    ENV['fastboot-app-server-aws'] = {
       ...AWS,
+      awsPrefix: 'fastboots',
     };
 
     ENV.pipeline = {

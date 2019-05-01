@@ -1,7 +1,10 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+{{#power-select options=model onchange=(action (mut name)) as |name|}}
+  {{name}}
+{{/power-select}}
 
-{{outlet}}
+{{name}}
 
-test
+{{utc}}
+
+
+<h1>Fastboot!</h1>
