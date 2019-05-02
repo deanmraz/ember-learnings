@@ -1,6 +1,6 @@
-{{#power-select options=model onchange=(action (mut name)) as |name|}}
+<PowerSelect @options={{this.model}} @onchange={{action (mut name)}} as |name|>
   {{name}}
-{{/power-select}}
+</PowerSelect>
 
 {{name}}
 
