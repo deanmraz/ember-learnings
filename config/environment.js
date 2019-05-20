@@ -4,7 +4,7 @@ module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'ember-learnings',
     environment,
-    rootURL: '/',
+    rootURL: '/demo-fastboot/',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {

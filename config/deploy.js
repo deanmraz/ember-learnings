@@ -31,6 +31,7 @@ module.exports = function(deployTarget) {
 
     ENV.s3 = {
       ...AWS,
+      prefix: 'demo-fastboot',
     };
 
     ENV['s3-index'] = {
