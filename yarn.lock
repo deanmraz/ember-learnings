@@ -3714,10 +3714,10 @@ ember-cli-deploy-build@^1.1.1:
     glob "^7.1.1"
     rsvp "^3.5.0"
 
-ember-cli-deploy-fastboot-app-server-aws@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/ember-cli-deploy-fastboot-app-server-aws/-/ember-cli-deploy-fastboot-app-server-aws-0.0.3.tgz#89b551e5c85c0cefa15ccbff81c9cfe838124d96"
-  integrity sha512-Xeo1PG+F3FSw1rDW+jUZSbOQbSt+OdXQch0EHlyWckuQst/c05j2PrT21QFGvc3R+KfzqDGFAX2RtAjNFPOCMg==
+ember-cli-deploy-fastboot-app-server-aws@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/ember-cli-deploy-fastboot-app-server-aws/-/ember-cli-deploy-fastboot-app-server-aws-0.0.4.tgz#d457d99bb779182fe4559ae8d34fe44543e82bea"
+  integrity sha512-IcgPfbA8klBfNfpRAdTIzk8ExmRob0wM/jfMRRDWyx17+6EEv14u0jcgY1XHzZE2YhYYow4Q5udHAWApIFWxBA==
   dependencies:
     aws-sdk "^2.80.0"
     ember-cli-deploy-plugin "^0.2.9"
